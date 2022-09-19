@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.shoesstore.viewmodel.shoeViewModel" />
+    </data>
+
+    <!-- this constraint layout for displaying the shoes details  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ShoesList">
+
+        <!-- this text view displaying the shoes details label-->
+
+        <!-- this edit text for taking the shoes company -->
+
+        <TextView
+            android:id="@+id/shoesDetailsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="@string/shoes_details"
+            android:textColor="@color/blue"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:textColor="@color/green"
+            android:text="@{viewModel.shoeName}"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoesDetailsLabel" />
+
+        <EditText
+            android:id="@+id/companyEdit"
+            android:layout_width="268dp"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/some_green"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/companyLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.703"
+            app:layout_constraintStart_toEndOf="@+id/companyLabel"
+            tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck" />
+
+        <!-- this textview displays the name label -->
+
+        <!-- this textview displays the company label -->
+
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="44dp"
+            android:text="Name"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/companyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
+            android:text="Company"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+        <!-- this edit text for taking the shoes size -->
+        <EditText
+            android:id="@+id/sizeEdit"
+            android:layout_width="268dp"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/some_green"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sizeLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.872"
+            app:layout_constraintStart_toEndOf="@+id/sizeLabel"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- this textview displays the size label -->
+        <TextView
+            android:id="@+id/sizeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:text="Size"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/companyLabel" />
+
+        <!-- this edit text for taking the description name -->
+        <EditText
+            android:id="@+id/descriptionEdit"
+            android:layout_width="268dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/some_green"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/descLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.609"
+            app:layout_constraintStart_toEndOf="@+id/descLabel"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- this textview displays the description label -->
+        <TextView
+            android:id="@+id/descLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="40dp"
+            android:text="Description"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sizeLabel" />
+
+        <!-- this edit text for taking the shoes name -->
+        <EditText
+            android:id="@+id/nameEdit"
+            android:layout_width="268dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="@={viewModel.shoeName}"
+            android:inputType="textPersonName"
+            android:textColor="@color/some_green"
+            android:textColorLink="@color/some_green"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nameLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.82"
+            app:layout_constraintStart_toEndOf="@+id/nameLabel"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <!-- this button for cancel the data that entered -->
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:backgroundTint="@color/greensh_blue"
+            android:text="cancel"
+            app:layout_constraintEnd_toStartOf="@+id/saveBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionEdit" />
+
+        <!-- this button for saving the details that enterd -->
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="104dp"
+            android:backgroundTint="@color/green_with_a_tase_of_blue"
+            android:text="Save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cancelBtn"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionEdit" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

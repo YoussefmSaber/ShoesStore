@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- this constraint layout holds the scroll view and the linear layout that displays the shoes -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- scroll view and linear layout are used so to that it supports more shoe listings -->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/add_shoe_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <!-- the linear layout used for holding the shoes items and display them in rows -->
+            <LinearLayout
+                android:id="@+id/shoe_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:textAlignment="center" />
+        </ScrollView>
+
+        <!-- the floating action bar in used for navigate to the shoe details fragment and add more shoes -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_shoe_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:contentDescription="@string/add_shoes"
+            android:focusable="true"
+            app:backgroundTint="@color/greensh_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.98"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_baseline_add_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

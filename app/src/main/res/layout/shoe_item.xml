@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This textView is used to hold the names of the shoes that is stored in shoelist -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Just a place holder"
+    android:textAlignment="center"
+    android:textColor="@color/greensh_blue"
+    android:textSize="35sp" />
+
+
