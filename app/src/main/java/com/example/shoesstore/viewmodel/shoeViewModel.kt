@@ -5,14 +5,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.shoesstore.module.Shoe
 
-class shoeViewModel: ViewModel() {
+class ShoeViewModel: ViewModel() {
 
     private val _shoeList =MutableLiveData<MutableList<Shoe>>()
     val shoeName = MutableLiveData<String>()
     val shoeList:LiveData<MutableList<Shoe>> get() = _shoeList
 
     init {
-        shoeName.value = "placeHolder"
+        shoeName.value = ""
         _shoeList.value = mutableListOf()
     }
 

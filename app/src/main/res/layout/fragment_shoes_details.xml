@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.shoesstore.viewmodel.shoeViewModel" />
+            type="com.example.shoesstore.viewmodel.ShoeViewModel" />
     </data>
 
     <!-- this constraint layout for displaying the shoes details  -->

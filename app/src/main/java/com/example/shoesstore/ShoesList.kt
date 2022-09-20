@@ -1,14 +1,13 @@
 package com.example.shoesstore
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.shoesstore.databinding.FragmentShoesListBinding
-import com.example.shoesstore.viewmodel.shoeViewModel
+import com.example.shoesstore.viewmodel.ShoeViewModel
 import kotlinx.android.synthetic.main.shoe_item.view.*
 import timber.log.Timber
 
@@ -16,7 +15,7 @@ import timber.log.Timber
 class ShoesList : Fragment() {
 
     private lateinit var binding: FragmentShoesListBinding
-    private val viewModel:  shoeViewModel by activityViewModels()
+    private val viewModel:  ShoeViewModel by activityViewModels()
 
 
     override fun onCreateView(
