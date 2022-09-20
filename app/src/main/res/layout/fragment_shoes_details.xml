@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.example.shoesstore.viewmodel.ShoeViewModel" />
@@ -31,18 +32,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:textColor="@color/green"
-            android:text="@{viewModel.shoeName}"
-            android:textSize="25sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/shoesDetailsLabel" />
 
         <EditText
             android:id="@+id/companyEdit"
@@ -68,12 +57,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="44dp"
-            android:text="Name"
+            android:layout_marginTop="120dp"
+            android:text="@string/name"
             android:textColor="@color/green"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/shoesDetailsLabel" />
 
         <TextView
             android:id="@+id/companyLabel"
@@ -81,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="44dp"
-            android:text="Company"
+            android:text="@string/company"
             android:textColor="@color/green"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
-            android:text="Size"
+            android:text="@string/size"
             android:textColor="@color/green"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -150,8 +139,8 @@
             android:layout_width="268dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:text="@={viewModel.shoeName}"
             android:inputType="textPersonName"
+            android:text="@={viewModel.shoeName}"
             android:textColor="@color/some_green"
             android:textColorLink="@color/some_green"
             android:textSize="20sp"
@@ -184,7 +173,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cancelBtn"
             app:layout_constraintTop_toBottomOf="@+id/descriptionEdit" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

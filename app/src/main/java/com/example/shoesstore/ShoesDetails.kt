@@ -36,10 +36,9 @@ class ShoesDetails : Fragment() {
         binding.lifecycleOwner = this
 
         _binding.saveBtn.setOnClickListener{
-            sharedViewModel.addShoes(_binding.nameEdit.text.toString(),
-                                     _binding.companyEdit.text.toString(),
-                                     _binding.sizeEdit.text.toString(),
-                                     _binding.descriptionEdit.text.toString())
+            viewModel.shoeName.value?.let { it1 ->
+                sharedViewModel.addShoes(it1, _binding.companyEdit, _binding.sizeEdit, _binding.descriptionEdit)
+            }
             it.findNavController().navigate(ShoesDetailsDirections.actionShoesDetailsToShoesList())
         }
 

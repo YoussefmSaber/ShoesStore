@@ -1,5 +1,6 @@
 package com.example.shoesstore.viewmodel
 
+import android.widget.EditText
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -16,7 +17,7 @@ class ShoeViewModel: ViewModel() {
         _shoeList.value = mutableListOf()
     }
 
-    fun addShoes(name: String, company: String, size: String, description: String){
+    fun addShoes(name: String, company: EditText, size: EditText, description: EditText){
         val shoe =Shoe(name, company, size, description)
         _shoeList.value!!.add(shoe)
     }

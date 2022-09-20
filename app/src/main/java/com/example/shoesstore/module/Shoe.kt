@@ -1,6 +1,9 @@
 package com.example.shoesstore.module
 
-data class Shoe (var name: String,
-                var company: String,
-                var size: String,
-                var description: String)
+import android.widget.EditText
+
+data class Shoe(
+    var name: String,
+    var company: EditText,
+    var size: EditText,
+    var description: EditText)

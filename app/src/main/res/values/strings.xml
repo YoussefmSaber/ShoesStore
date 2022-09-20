@@ -16,4 +16,7 @@
     <string name="instruction_desc1">press the "+" in the bottom right corner to add new shoes to the shoes list. you can save or cancel the data you entered by pressing the button respectively.</string>
     <string name="shoes_details">Shoes Details</string>
     <string name="add_shoes">add Shoes</string>
+    <string name="size">Size</string>
+    <string name="company">Company</string>
+    <string name="name">Name</string>
 </resources>
